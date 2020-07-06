@@ -50,24 +50,63 @@
       <!-- [x] #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. -->
       <!-- [x] #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. -->
       <p>
-        <label for="number" id="number-label">Number</label>
+        <label for="number" id="number-label">Phone Number</label>
         <input
           type="number"
           name="number"
           id="number"
           min="0"
           max="99999999999"
-          placeholder="0"
+          maxlength="10"
+          placeholder="0404696404"
         />
       </p>
-      <!-- 
-			[ ] #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
-			[ ] #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
-			[ ] #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
-			[ ] #15: Inside the form element, I am presented with a textarea at the end for additional comments.
-			[ ] #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
-			-->
+      <!-- [x] #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->
       <p>
+        <label for="dropdown" id="dropdown-label">Age</label>
+        <select name="dropdown" id="dropdown">
+          <option value="child">Less then 18 yrs old</option>
+          <option value="adult" selected>18 - 60 yrs old</option>
+          <option value="senior">Over 60 yrs old</option>
+        </select>
+      </p>
+      <!-- [x] #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
+      <p>
+        <input type="radio" name="gender" class="gender" value="male" />
+        Male
+        <input type="radio" name="gender" class="gender" value="female" />
+        Female
+      </p>
+      <!-- [x] #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+      <p>
+        <input type="checkbox" id="music0" name="music0" value="Pop" />Pop<br />
+        <input
+          type="checkbox"
+          id="music1"
+          name="music1"
+          value="Jazz"
+        />Jazz<br />
+        <input
+          type="checkbox"
+          id="music2"
+          name="music2"
+          value="Rock"
+        />Rock<br />
+        <input
+          type="checkbox"
+          id="music3"
+          name="music3"
+          value="Country"
+        />Country<br />
+        <input type="checkbox" id="music4" name="music4" value="Hip Hop" />Hip
+        Hop<br />
+      </p>
+      <p>
+        <!-- [x] #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
+        <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
+      </p>
+      <p>
+        <!-- [x] #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
         <button type="submit">Submit</button>
       </p>
     </form>
